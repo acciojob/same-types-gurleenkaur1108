@@ -1,5 +1,12 @@
 function isSameType(value1, value2) {
-  //your js code here
+  if (isNan(value1) || isNan(value2)) {
+    return isNan(value1) === isNan(value2);
+  }
+  return toString.call(value1) === toString.call(value2);
+}
+
+function isNan(val) {
+  return val !== val;
 }
 
 // do not change the code below.
